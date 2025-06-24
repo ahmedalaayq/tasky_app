@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:tasky/screens/widgets/custom_elevated_button.dart';
 import 'package:tasky/screens/widgets/custom_primary_welcome_section.dart';
 import 'package:tasky/screens/widgets/custom_text_form_field.dart';
 import 'package:tasky/screens/widgets/custom_top_welcome_section.dart';
@@ -13,6 +14,7 @@ class WelcomeScreen extends StatelessWidget {
     final String? plusJakartaSans = GoogleFonts.plusJakartaSans().fontFamily;
     final String? poppins = GoogleFonts.poppins().fontFamily;
     final String? roboto = GoogleFonts.roboto().fontFamily;
+
     return Scaffold(
       backgroundColor: const Color(0xFF181818),
       body: SafeArea(
@@ -34,6 +36,8 @@ class WelcomeScreen extends StatelessWidget {
 
               /// TODO: Custom Text Form Field
               CustomTextFormField(poppins: poppins, roboto: roboto),
+              // TODO: Custom Elevated Button
+              CustomElevatedButton(poppins: poppins),
             ],
           ),
         ),
