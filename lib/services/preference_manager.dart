@@ -30,4 +30,15 @@ class PreferenceManager {
   bool? getBool({required String key}) {
     return pref.getBool(key);
   }
+
+
+  clearPreference()
+  async{
+    await pref.clear();
+  }
+
+  deletePreferenceKey({required String key}) async
+  {
+    await pref.remove(key);
+  }
 }

@@ -9,14 +9,14 @@ import 'package:tasky/services/preference_manager.dart';
 
 import 'home_page.dart';
 
-class WelcomeScreen extends StatefulWidget {
-  const WelcomeScreen({super.key});
+class WelcomePage extends StatefulWidget {
+  const WelcomePage({super.key});
 
   @override
-  State<WelcomeScreen> createState() => _WelcomeScreenState();
+  State<WelcomePage> createState() => _WelcomePageState();
 }
 
-class _WelcomeScreenState extends State<WelcomeScreen> {
+class _WelcomePageState extends State<WelcomePage> {
   late GlobalKey<FormState> _key;
   late TextEditingController _nameController;
 
