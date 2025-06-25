@@ -71,6 +71,10 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                   poppins: poppins,
                   onPressed: () {
                     if (_key.currentState?.validate() ?? false) {
+                      PreferenceManager().setString(
+                        key: 'userName',
+                        value: _nameController.text,
+                      );
                       Navigator.push(
                         context,
                         MaterialPageRoute(
