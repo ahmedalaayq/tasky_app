@@ -5,11 +5,12 @@ class CustomTextFormField extends StatelessWidget {
     super.key,
     required this.poppins,
     required this.roboto,
-    required this.validator,
+    required this.validator, required this.controller,
   });
 
   final String? poppins, roboto;
   final String? Function(String?)? validator;
+  final TextEditingController controller;
 
   @override
   Widget build(BuildContext context) {
@@ -32,6 +33,7 @@ class CustomTextFormField extends StatelessWidget {
           ),
           const SizedBox(height: 8),
           TextFormField(
+            controller: controller,
             validator: validator,
             cursorColor: const Color(0xFFFFFCFC),
             cursorWidth: 2,

@@ -5,6 +5,7 @@ import 'package:tasky/screens/widgets/custom_primary_welcome_section.dart';
 import 'package:tasky/screens/widgets/custom_text_form_field.dart';
 import 'package:tasky/screens/widgets/custom_top_welcome_section.dart';
 import 'package:tasky/screens/widgets/custom_welcome_placeholder_image.dart';
+import 'package:tasky/services/preference_manager.dart';
 
 import 'home_page.dart';
 
@@ -17,11 +18,13 @@ class WelcomeScreen extends StatefulWidget {
 
 class _WelcomeScreenState extends State<WelcomeScreen> {
   late GlobalKey<FormState> _key;
+  late TextEditingController _nameController;
 
   @override
   void initState() {
     super.initState();
     _key = GlobalKey<FormState>();
+    _nameController = TextEditingController();
   }
 
   @override
@@ -53,6 +56,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
 
                 /// TODO: Custom Text Form Field
                 CustomTextFormField(
+                  controller: _nameController,
                   poppins: poppins,
                   roboto: roboto,
                   validator: (value) {

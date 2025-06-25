@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:tasky/screens/welcome_screen.dart';
+import 'package:tasky/services/preference_manager.dart';
 
-void main() {
+void main() async{
+  WidgetsFlutterBinding.ensureInitialized();
+  await PreferenceManager().initPreference();
   runApp(const MyApp());
 }
 
