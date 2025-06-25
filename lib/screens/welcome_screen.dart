@@ -6,6 +6,8 @@ import 'package:tasky/screens/widgets/custom_text_form_field.dart';
 import 'package:tasky/screens/widgets/custom_top_welcome_section.dart';
 import 'package:tasky/screens/widgets/custom_welcome_placeholder_image.dart';
 
+import 'home_page.dart';
+
 class WelcomeScreen extends StatefulWidget {
   const WelcomeScreen({super.key});
 
@@ -14,7 +16,6 @@ class WelcomeScreen extends StatefulWidget {
 }
 
 class _WelcomeScreenState extends State<WelcomeScreen> {
-
   late GlobalKey<FormState> _key;
 
   @override
@@ -22,6 +23,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
     super.initState();
     _key = GlobalKey<FormState>();
   }
+
   @override
   Widget build(BuildContext context) {
     final String? plusJakartaSans = GoogleFonts.plusJakartaSans().fontFamily;
@@ -61,13 +63,19 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                   },
                 ),
                 // TODO: Custom Elevated Button
-                CustomElevatedButton(poppins: poppins, onPressed: ()
-                {
-                  if(_key.currentState?.validate() ?? false)
-                  {
-
-                  }
-                },),
+                CustomElevatedButton(
+                  poppins: poppins,
+                  onPressed: () {
+                    if (_key.currentState?.validate() ?? false) {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const HomePage(),
+                        ),
+                      );
+                    }
+                  },
+                ),
               ],
             ),
           ),
