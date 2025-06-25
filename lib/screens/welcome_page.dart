@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:tasky/screens/widgets/custom_elevated_button.dart';
-import 'package:tasky/screens/widgets/custom_primary_welcome_section.dart';
-import 'package:tasky/screens/widgets/custom_text_form_field.dart';
-import 'package:tasky/screens/widgets/custom_top_welcome_section.dart';
-import 'package:tasky/screens/widgets/custom_welcome_placeholder_image.dart';
+import 'package:tasky/widgets/custom_elevated_button.dart';
+import 'package:tasky/widgets/custom_primary_welcome_section.dart';
+import 'package:tasky/widgets/custom_text_form_field.dart';
+import 'package:tasky/widgets/custom_top_welcome_section.dart';
+import 'package:tasky/widgets/custom_welcome_placeholder_image.dart';
 import 'package:tasky/services/preference_manager.dart';
 
 import 'home_page.dart';

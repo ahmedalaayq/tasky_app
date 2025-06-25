@@ -21,6 +21,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Tasky',
       theme: ThemeData(
+        scaffoldBackgroundColor: const Color(0xFF181818),
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
       home:
