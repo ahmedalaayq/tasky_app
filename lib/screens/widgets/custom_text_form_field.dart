@@ -5,9 +5,11 @@ class CustomTextFormField extends StatelessWidget {
     super.key,
     required this.poppins,
     required this.roboto,
+    required this.validator,
   });
 
   final String? poppins, roboto;
+  final String? Function(String?)? validator;
 
   @override
   Widget build(BuildContext context) {
@@ -30,6 +32,7 @@ class CustomTextFormField extends StatelessWidget {
           ),
           const SizedBox(height: 8),
           TextFormField(
+            validator: validator,
             cursorColor: const Color(0xFFFFFCFC),
             cursorWidth: 2,
             style: const TextStyle(
@@ -52,6 +55,13 @@ class CustomTextFormField extends StatelessWidget {
               ),
               enabledBorder: _buildTextFieldBorder(),
               focusedBorder: _buildTextFieldBorder(),
+              errorBorder: _buildTextFieldBorder(Colors.red),
+              focusedErrorBorder: _buildTextFieldBorder(Colors.red,1.5),
+              errorStyle: const TextStyle(
+                color: Colors.red,
+                fontSize: 14,
+                fontWeight: FontWeight.bold,
+              ),
             ),
           ),
           const SizedBox(height: 24),
@@ -63,9 +73,12 @@ class CustomTextFormField extends StatelessWidget {
   }
 }
 
-OutlineInputBorder _buildTextFieldBorder() {
+OutlineInputBorder _buildTextFieldBorder([Color? color, double? width]) {
   return OutlineInputBorder(
     borderRadius: BorderRadius.circular(16),
-    borderSide: const BorderSide(color: Color(0xFF282828), width: 1),
+    borderSide: BorderSide(
+      color: color ?? const Color(0xFF282828),
+      width: width ?? 1,
+    ),
   );
 }
