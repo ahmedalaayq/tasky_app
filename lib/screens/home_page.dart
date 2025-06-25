@@ -1,10 +1,8 @@
-import 'dart:math';
-
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:tasky/helper/helper.dart';
 import 'package:tasky/services/preference_manager.dart';
+import 'package:tasky/widgets/custom_achieved_task.dart';
 import 'package:tasky/widgets/custom_top_home_section.dart';
 import 'package:tasky/widgets/custom_upper_top_section.dart';
 
@@ -42,7 +40,10 @@ class _HomePageState extends State<HomePage> {
                 ),
               ),
               const SizedBox(height: 4),
-              CustomUpperTopSection(),
+              const CustomUpperTopSection(),
+              const SizedBox(height: 16),
+           /// TODO: Custom Achieved Task Widget
+              const CustomAchievedTask(),
             ],
           ),
         ),
