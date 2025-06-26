@@ -5,12 +5,21 @@ class CustomTextFormField extends StatelessWidget {
     super.key,
     required this.poppins,
     required this.roboto,
-    required this.validator, required this.controller,
+    required this.validator,
+    required this.controller,
+    required this.titleName,
+    required this.hintText,
+    this.hintStyle,
+    this.titleNameTextStyle,
   });
 
   final String? poppins, roboto;
   final String? Function(String?)? validator;
   final TextEditingController controller;
+  final String titleName;
+  final TextStyle? titleNameTextStyle;
+  final String hintText;
+  final TextStyle? hintStyle;
 
   @override
   Widget build(BuildContext context) {
@@ -22,13 +31,15 @@ class CustomTextFormField extends StatelessWidget {
           Align(
             alignment: Alignment.centerLeft,
             child: Text(
-              'Full Name',
-              style: TextStyle(
-                fontSize: 16,
-                fontWeight: FontWeight.w500,
-                fontFamily: poppins,
-                color: const Color(0xFFFFFCFC),
-              ),
+              titleName,
+              style:
+                  titleNameTextStyle ??
+                  TextStyle(
+                    fontSize: 16,
+                    fontWeight: FontWeight.w500,
+                    fontFamily: poppins,
+                    color: const Color(0xFFFFFCFC),
+                  ),
             ),
           ),
           const SizedBox(height: 8),
@@ -43,13 +54,15 @@ class CustomTextFormField extends StatelessWidget {
               fontWeight: FontWeight.bold,
             ),
             decoration: InputDecoration(
-              hintText: 'e.g. Sarah Khalid',
-              hintStyle: TextStyle(
-                color: const Color(0xFF6D6D6D),
-                fontWeight: FontWeight.w500,
-                fontSize: 16,
-                fontFamily: roboto,
-              ),
+              hintText: hintText,
+              hintStyle:
+                  hintStyle ??
+                  TextStyle(
+                    color: const Color(0xFF6D6D6D),
+                    fontWeight: FontWeight.w500,
+                    fontSize: 16,
+                    fontFamily: roboto,
+                  ),
               fillColor: const Color(0xFF282828),
               filled: true,
               border: OutlineInputBorder(
@@ -58,7 +71,7 @@ class CustomTextFormField extends StatelessWidget {
               enabledBorder: _buildTextFieldBorder(),
               focusedBorder: _buildTextFieldBorder(),
               errorBorder: _buildTextFieldBorder(Colors.red),
-              focusedErrorBorder: _buildTextFieldBorder(Colors.red,1.5),
+              focusedErrorBorder: _buildTextFieldBorder(Colors.red, 1.5),
               errorStyle: const TextStyle(
                 color: Colors.red,
                 fontSize: 14,

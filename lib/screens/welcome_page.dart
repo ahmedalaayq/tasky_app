@@ -65,6 +65,8 @@ class _WelcomePageState extends State<WelcomePage> {
                     }
                     return null;
                   },
+                  titleName: 'Full Name', hintText: 'e.g. Sarah Khalid',
+
                 ),
                 // TODO: Custom Elevated Button
                 CustomElevatedButton(

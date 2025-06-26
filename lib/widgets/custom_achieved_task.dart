@@ -45,7 +45,7 @@ class CustomAchievedTask extends StatelessWidget {
                 child: const CircularProgressIndicator(
                   strokeAlign: 1.4,
                   backgroundColor: Color(0xFF6D6D6D),
-                  valueColor: AlwaysStoppedAnimation(Color(0xFF15B86C)),
+                  valueColor: AlwaysStoppedAnimation<Color>(Color(0xFF15B86C)),
                   value: 0.5,
                 ),
               ),
