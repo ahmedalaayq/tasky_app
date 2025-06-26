@@ -3,6 +3,7 @@ import 'package:flutter_svg/svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:tasky/helper/helper.dart';
 import 'package:tasky/screens/add_task_page.dart';
+import 'package:tasky/screens/welcome_page.dart';
 import 'package:tasky/services/preference_manager.dart';
 import 'package:tasky/widgets/custom_achieved_task.dart';
 import 'package:tasky/widgets/custom_top_home_section.dart';
@@ -48,7 +49,7 @@ class _HomePageState extends State<HomePage> {
 
               /// TODO: Custom Achieved Task Widget
               const CustomAchievedTask(),
-              const SizedBox(height: 116),
+              const SizedBox(height: 80),
               Text(
                 'My Tasks',
                 style: TextStyle(

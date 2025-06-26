@@ -29,9 +29,15 @@ class _WelcomePageState extends State<WelcomePage> {
 
   @override
   Widget build(BuildContext context) {
-    final String? plusJakartaSans = GoogleFonts.plusJakartaSans().fontFamily;
-    final String? poppins = GoogleFonts.poppins().fontFamily;
-    final String? roboto = GoogleFonts.roboto().fontFamily;
+    final String? plusJakartaSans = GoogleFonts
+        .plusJakartaSans()
+        .fontFamily;
+    final String? poppins = GoogleFonts
+        .poppins()
+        .fontFamily;
+    final String? roboto = GoogleFonts
+        .roboto()
+        .fontFamily;
 
     return Scaffold(
       backgroundColor: const Color(0xFF181818),
@@ -65,11 +71,13 @@ class _WelcomePageState extends State<WelcomePage> {
                     }
                     return null;
                   },
-                  titleName: 'Full Name', hintText: 'e.g. Sarah Khalid',
+                  titleName: 'Full Name',
+                  hintText: 'e.g. Sarah Khalid',
 
                 ),
                 // TODO: Custom Elevated Button
                 CustomElevatedButton(
+                  buttonName: 'Let’s Get Started',
                   poppins: poppins,
                   onPressed: () {
                     if (_key.currentState?.validate() ?? false) {

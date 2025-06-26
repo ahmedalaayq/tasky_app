@@ -11,6 +11,7 @@ class CustomTextFormField extends StatelessWidget {
     required this.hintText,
     this.hintStyle,
     this.titleNameTextStyle,
+    this.maxLines,
   });
 
   final String? poppins, roboto;
@@ -20,6 +21,7 @@ class CustomTextFormField extends StatelessWidget {
   final TextStyle? titleNameTextStyle;
   final String hintText;
   final TextStyle? hintStyle;
+  final int? maxLines;
 
   @override
   Widget build(BuildContext context) {
@@ -44,6 +46,7 @@ class CustomTextFormField extends StatelessWidget {
           ),
           const SizedBox(height: 8),
           TextFormField(
+            maxLines: maxLines ?? 1,
             controller: controller,
             validator: validator,
             cursorColor: const Color(0xFFFFFCFC),

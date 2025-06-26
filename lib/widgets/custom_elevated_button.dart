@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 
 class CustomElevatedButton extends StatelessWidget {
-  const CustomElevatedButton({super.key, required this.poppins, required this.onPressed});
+  const CustomElevatedButton({super.key, required this.poppins, required this.onPressed, required this.buttonName});
 
   final String? poppins;
   final VoidCallback onPressed;
+  final String buttonName;
 
   @override
   Widget build(BuildContext context) {
@@ -18,7 +19,7 @@ class CustomElevatedButton extends StatelessWidget {
         ),
         onPressed: onPressed,
         child: Text(
-          'Let’s Get Started',
+          'Add Task',
           style: TextStyle(
             fontSize: 16,
             fontWeight: FontWeight.w600,
